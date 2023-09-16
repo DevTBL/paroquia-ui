@@ -1,20 +1,3 @@
-/*!
-
-=========================================================
-* Argon Design System React - v1.1.2
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/argon-design-system-react
-* Copyright 2023 Creative Tim (https://www.creative-tim.com)
-* Licensed under MIT (https://github.com/creativetimofficial/argon-design-system-react/blob/master/LICENSE.md)
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
 import React from "react";
 
 // reactstrap components
@@ -36,8 +19,8 @@ import {
 } from "reactstrap";
 
 // core components
-import DemoNavbar from "../components/Navbars/DemoNavbar.js";
-import SimpleFooter from "../components/Footers/SimpleFooter.js";
+import DemoNavbar from "../../components/Navbars/DemoNavbar.js";
+import SimpleFooter from "../../components/Footers/SimpleFooter.js";
 import axios from "axios";
 
 
@@ -60,11 +43,11 @@ class CreatePost extends React.Component {
     axios.post("http://localhost:8081/api/create-post", formData)
         .then((response) => {
           console.log("Dados enviados com sucesso:", response.data);
-          // Limpe os campos do formulário e a imagem carregada
-          // this.setState({
-          //   uploadedImage: null,
-          //   photo: null,
-          // });
+          // Limpa os campos do formulário e a imagem carregada
+          this.setState({
+            uploadedImage: null,
+            photo: null,
+          });
         })
         .catch((error) => {
           console.error("Erro ao enviar os dados:", error);
