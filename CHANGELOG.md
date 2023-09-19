@@ -3,7 +3,7 @@
 ## [1.1.2] 2023-06-02
 
 - Update dependencies
-- Fix Warnings
+- Fix Warnings.
 
 ## [1.1.1] 2022-08-25
 
